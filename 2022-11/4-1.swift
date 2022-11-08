@@ -1,9 +1,8 @@
-
 var a: String! = nil
 
 let c1 = a ?? "default"
 let count1 = a?.count
-a  = "abc"
+a = "abc"
 
 let c2 = a ?? "default"
 let count2 = a.count
