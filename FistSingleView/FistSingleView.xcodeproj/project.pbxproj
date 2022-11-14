@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		412B9D22291FBB8700B9BD7B /* CirleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B9D21291FBB8700B9BD7B /* CirleImage.swift */; };
 		412B9D24291FBD2B00B9BD7B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B9D23291FBD2B00B9BD7B /* MapView.swift */; };
+		417D63AF2921FC45001F2743 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D63AE2921FC45001F2743 /* AnimationView.swift */; };
 		9EE3251C1A5C5F2AC58FC2F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE32916F1289250B9FFA61A /* Assets.xcassets */; };
 		9EE3278017261F40DC4CFF21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE32F12BA3EA052E5528A47 /* Preview Assets.xcassets */; };
 		9EE32D558CF44377637862F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE325478079EB5F049CD677 /* ContentView.swift */; };
@@ -18,6 +19,8 @@
 /* Begin PBXFileReference section */
 		412B9D21291FBB8700B9BD7B /* CirleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirleImage.swift; sourceTree = "<group>"; };
 		412B9D23291FBD2B00B9BD7B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		417D63AE2921FC45001F2743 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		417D63B02921FE6A001F2743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9EE32122E9EDCB9CF92D6DAA /* FistSingleViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FistSingleViewApp.swift; sourceTree = "<group>"; };
 		9EE325478079EB5F049CD677 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9EE32916F1289250B9FFA61A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,11 +61,12 @@
 		9EE32BC738BC4D7AD617E4CC /* FistSingleView */ = {
 			isa = PBXGroup;
 			children = (
+				417D63B02921FE6A001F2743 /* Info.plist */,
 				9EE32916F1289250B9FFA61A /* Assets.xcassets */,
 				9EE32FB5038EAB7528656961 /* FistSingleView.entitlements */,
 				9EE32FEB332B39273543AFEB /* Preview Content */,
 				9EE32122E9EDCB9CF92D6DAA /* FistSingleViewApp.swift */,
-				9EE325478079EB5F049CD677 /* ContentView.swift */,
+				417D63AE2921FC45001F2743 /* AnimationView.swift */,
 			);
 			path = FistSingleView;
 			sourceTree = "<group>";
@@ -70,6 +74,7 @@
 		9EE32FEB332B39273543AFEB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				9EE325478079EB5F049CD677 /* ContentView.swift */,
 				9EE32F12BA3EA052E5528A47 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -101,6 +106,7 @@
 		9EE325AC2FC21CF54EE944D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 1410;
 			};
 			buildConfigurationList = 9EE32D28E5C4B1F100A4709C /* Build configuration list for PBXProject "FistSingleView" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -138,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EE32F3E26EC7B2B812667C2 /* FistSingleViewApp.swift in Sources */,
+				417D63AF2921FC45001F2743 /* AnimationView.swift in Sources */,
 				412B9D24291FBD2B00B9BD7B /* MapView.swift in Sources */,
 				9EE32D558CF44377637862F2 /* ContentView.swift in Sources */,
 				412B9D22291FBB8700B9BD7B /* CirleImage.swift in Sources */,
@@ -151,6 +158,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -180,6 +188,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -191,6 +200,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -205,18 +215,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FistSingleView/FistSingleView.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"FistSingleView/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FistSingleView/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortraitUpsideDown;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxq.FistSingleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -230,6 +248,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -259,6 +278,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -276,6 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -292,18 +313,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FistSingleView/FistSingleView.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"FistSingleView/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FistSingleView/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortraitUpsideDown;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxq.FistSingleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

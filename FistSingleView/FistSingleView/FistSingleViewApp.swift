@@ -13,6 +13,7 @@ struct FistSingleViewApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+
         }
     }
 }

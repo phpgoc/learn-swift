@@ -29,6 +29,7 @@ struct ContentView: View {
                     Text("北京").font(.subheadline)
                 }
             }
+            AnimationView()
           
         }
         .padding()
