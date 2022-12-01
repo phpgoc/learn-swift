@@ -9,11 +9,12 @@
 import Foundation
 
 struct CalBrain{
-    var bmi: Float = 0.0
+    var bmi: BMI?
     mutating func calBMI (height: Float, weight: Float){
-        bmi = weight / height / height
+        let bmiValue = weight / height / height
+        bmi = BMI(value: bmiValue)
     }
     func getBMIValue() -> String {
-        String(format: "%.1f", bmi)
+        String(format: "%.1f", bmi?.value ?? 0)
     }
 }

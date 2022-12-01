@@ -35,13 +35,11 @@ class CalController: UIViewController {
         w.text = "\(v)kg"
 
     }
-    var bmiStr :String = "0.0"
     @IBAction func cal(_ sender: UIButton) {
         let height = hSlider.value
         let weight = wSlider.value
         calBraian.calBMI(height: height, weight: weight)
-        let bmi = weight / height / height
-        bmiStr = String(format: "%.1f",bmi)
+
         self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     
@@ -49,6 +47,9 @@ class CalController: UIViewController {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultController
             destinationVC.bmi = calBraian.getBMIValue()
+            destinationVC.color = calBraian.bmi?.color
+            destinationVC.advice = calBraian.bmi?.advice
+            
         }
     }
 }
